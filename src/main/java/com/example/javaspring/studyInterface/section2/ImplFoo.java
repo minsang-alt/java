@@ -7,9 +7,18 @@ public class ImplFoo implements Foo{
         System.out.println("this is ImplFoo");
     }
 
+    @Override
+    public String getName() {
+        return null;
+    }
+
+
     public static void main(String[] args) {
         ImplFoo implFoo = new ImplFoo();
         implFoo.printName();
         implFoo.newPrintName();
+
+        //쓰면 안됨
+        //implFoo.dontWriteThisMethod();
     }
 }

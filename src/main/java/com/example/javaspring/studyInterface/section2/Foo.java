@@ -5,4 +5,10 @@ public interface Foo {
     default void newPrintName(){
         System.out.println("newPrintName");
     }
+
+    default void dontWriteThisMethod(){
+        System.out.println(getName().toUpperCase());
+    }
+
+    String getName();
 }
