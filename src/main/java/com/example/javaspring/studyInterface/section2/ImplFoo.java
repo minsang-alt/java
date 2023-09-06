@@ -1,6 +1,6 @@
 package com.example.javaspring.studyInterface.section2;
 
-public class ImplFoo implements Foo{
+public class ImplFoo implements Foo,Bar{
 
     @Override
     public void printName() {
@@ -20,5 +20,7 @@ public class ImplFoo implements Foo{
 
         //쓰면 안됨
         //implFoo.dontWriteThisMethod();
+
+
     }
 }
