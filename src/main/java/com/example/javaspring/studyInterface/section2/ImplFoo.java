@@ -21,6 +21,5 @@ public class ImplFoo implements Foo,Bar{
         //쓰면 안됨
         //implFoo.dontWriteThisMethod();
 
-
     }
 }
