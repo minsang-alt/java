@@ -47,6 +47,9 @@ public class ReflectionEx {
 
         for (Field field : memberClass.getDeclaredFields()) {
             field.setAccessible(true);
+            if(field.getName().equals("name")){
+                field.set(member,"EVOO");
+            }
             System.out.println("field.getType() = " + field.getType() + " / field.getName() = " + field.getName()
                     + " / field.get(member) = " + field.get(member)
             );
