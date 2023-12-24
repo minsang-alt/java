@@ -1,10 +1,15 @@
 package com.example.javaspring.annotationEx;
 
 import lombok.Getter;
-import lombok.extern.log4j.Log4j;
 
+/**
+ * java live study - Annotation <br>
+ *
+ * @author evo
+ */
 @Getter
 public class Member   {
+
     private String name;
     private String phone_number;
 

@@ -6,7 +6,7 @@ public class ThreadEx10 implements Runnable{
 
     public static void main(String[] args) {
         Thread t = new Thread(new ThreadEx10());
-        t.setDaemon(true);
+        t.setDaemon(true); // 데몬스레드로 설정
         t.start();
 
         for (int i = 0; i <= 10; i++) {

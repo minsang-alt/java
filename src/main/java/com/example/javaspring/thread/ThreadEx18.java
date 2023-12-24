@@ -9,6 +9,7 @@ public class ThreadEx18 {
         th1.start();
         th2.start();
         th3.start();
+        Thread.interrupted();
 
         try {
             Thread.sleep(2000);

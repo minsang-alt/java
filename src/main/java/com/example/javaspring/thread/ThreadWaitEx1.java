@@ -79,7 +79,7 @@ class Table{
                     if(dishName.equals(dishes.get(i))){
                         dishes.remove(i);
                         notify();
-                        return;
+
                     }
                 }
                 try{

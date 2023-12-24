@@ -43,3 +43,16 @@
 [2023-09-02 17:13:45:9879] [31m[http-nio-8080-exec-1][0;39m [34mINFO [0;39m [1;37m[org.springframework.web.servlet.FrameworkServlet.initServletBean:[33m532[0;39m][0;39m - Initializing Servlet 'dispatcherServlet'
 [2023-09-02 17:13:45:9880] [31m[http-nio-8080-exec-1][0;39m [34mINFO [0;39m [1;37m[org.springframework.web.servlet.FrameworkServlet.initServletBean:[33m554[0;39m][0;39m - Completed initialization in 1 ms
 [2023-09-02 17:13:45:9890] [31m[http-nio-8080-exec-1][0;39m [34mINFO [0;39m [1;37m[com.example.javaspring.log4j.LogService.log:[33m14[0;39m][0;39m - info
+이[2023-09-02 18:57:19:6224663] [31m[http-nio-8080-exec-4][0;39m [34mINFO [0;39m [1;37m[org.apache.juli.logging.DirectJDKLog.log:[33m175[0;39m][0;39m - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x00{0x010x000x00w0x030x030xd70x0c0x9b0x85R,i0xca0xd20x1a0xaf0xf10xfae0x9e!O0x00i0x070x820x0a90x09Dp0xaa0x08I0xecK0xe80x000x000x1a0xc0/0xc0+0xc00x110xc00x070xc00x130xc00x090xc00x140xc00x0a0x000x050x00/0x0050xc00x120x000x0a0x010x000x0040x000x050x000x050x010x000x000x000x000x000x0a0x000x080x000x060x000x170x000x180x000x190x000x0b0x000x020x010x000x000x0d0x000x100x000x0e0x040x010x040x030x020x010x020x030x040x010x050x010x060x010xff0x010x000x010x00...]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:264)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
