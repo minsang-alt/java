@@ -1,5 +1,6 @@
 package com.example.javaspring.annotationEx.reflection;
 
+import com.example.javaspring.annotationEx.Ex0500;
 import com.example.javaspring.annotationEx.Member;
 import lombok.Getter;
 
@@ -36,13 +37,13 @@ public class ReflectionEx {
         }
         System.out.println("======================");*/
 
-       /* System.out.println("===getAnnotations()=====");
-        Annotation[] annotations = Member.class.getAnnotations();
+        System.out.println("===getAnnotations()=====");
+        Annotation[] annotations = Ex0500.class.getAnnotations();
         for (Annotation annotation : annotations) {
             System.out.println("annotation = " + annotation);
-        }*/
+        }
 
-        Class<Member> memberClass = Member.class;
+/*        Class<Member> memberClass = Member.class;
         Member member = new Member("evo", "01012345678");
 
         for (Field field : memberClass.getDeclaredFields()) {
@@ -53,7 +54,7 @@ public class ReflectionEx {
             System.out.println("field.getType() = " + field.getType() + " / field.getName() = " + field.getName()
                     + " / field.get(member) = " + field.get(member)
             );
-        }
+        }*/
 
 
     }
