@@ -4,6 +4,7 @@ import java.util.function.Supplier;
 
 public class Ex14_2 {
     public static int getMax(Supplier<Integer> sup) {
+
         return sup.get();
     }
 
