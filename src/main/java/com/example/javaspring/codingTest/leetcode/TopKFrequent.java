@@ -23,15 +23,20 @@ public class TopKFrequent {
         int[] result = new int[k];
         int idx = 0;
 
-        for (int frequency = nums.length; frequency >= 0 && idx < k; frequency--) {
+        for (int frequency = nums.length; frequency >= 0; frequency--) {
             if (buckets.containsKey(frequency)) {
                 List<Integer> elems = buckets.get(frequency);
                 for (Integer elem : elems) {
+                    if (idx == k) {
+                        break;
+                    }
                     result[idx] = elem;
                     idx++;
                 }
             }
-
+            if (idx == k) {
+                break;
+            }
         }
         return result;
 
