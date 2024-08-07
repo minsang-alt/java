@@ -5,6 +5,7 @@ public class Solution4 {
     private static boolean[] visit;
     private static int[][] computer;
 
+
     private void dfs(int now) {
         visit[now] = true;
         for (int i = 0; i < computer[now].length; i++) {
@@ -31,4 +32,6 @@ public class Solution4 {
         return answer;
 
     }
+
+
 }

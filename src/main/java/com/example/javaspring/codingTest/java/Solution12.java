@@ -1,5 +1,8 @@
 package com.example.javaspring.codingTest.java;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Solution12 {
 
     private static int max;
@@ -7,6 +10,10 @@ public class Solution12 {
     private static int[] answer;
 
     public static int[] solution(int n, int[] info) {
+        List<Integer> arr = new ArrayList<>();
+        //arr.contains()
+        new ArrayList<>(arr);
+
         apeach = info;
         max = 0;
         backtrack(n, 0, new int[11]);
