@@ -1,5 +1,6 @@
 package com.example.javaspring.thread.completable;
 
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 public class Ex1 {
@@ -52,15 +53,24 @@ public class Ex1 {
 //        System.out.println("MAIN Thread.currentThread().getName() = " + Thread.currentThread().getName());
 //        System.out.println("future.get() = " + future.get());
 
-//        CompletableFuture<Void> future = CompletableFuture.supplyAsync(() -> {
-//            return "Hello";
-//        }).thenAccept(s -> {
-//            System.out.println("Thread.currentThread().getName() = " + Thread.currentThread().getName()); // main
-//            System.out.println("s = " + s); // s = Hello
-//        }); //
-//
-//        System.out.println("과연 뭔가 출력될까? " + future.get()); // null
-//        System.out.println("없다면 CompletableFuture의 상태는 뭘까? " + future.state()); // SUCCESS
+        //--------------------------------------------------------------------------------------
+
+        CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
+//            try {
+//                Thread.sleep(1000);
+//            } catch (InterruptedException e) {
+//                throw new RuntimeException(e);
+//            }
+            return "Hello";
+        });
+
+        CompletableFuture<Void> future1 = future.thenAccept(s -> {
+            System.out.println("Thread.currentThread().getName() = " + Thread.currentThread().getName()); // main
+            System.out.println("s = " + s); // s = Hello
+        });
+
+        System.out.println("과연 뭔가 출력될까? " + future.get());
+        System.out.println("없다면 CompletableFuture의 상태는 뭘까? " + future.state()); // SUCCESS
 
         //--------------------------------------------------------------------------------------
 //        CompletableFuture<Void> future = CompletableFuture.supplyAsync(() -> "Hello")
